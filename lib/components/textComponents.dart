@@ -1,6 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:getx_practice/utils/color.dart';
 
+class TextComponent extends StatelessWidget {
+  final String textComponentValue;
+  const TextComponent({super.key, required this.textComponentValue});
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      textComponentValue,
+      style: TextStyle(color: Colors.black, fontSize: 33),
+    );
+  }
+}
+
 class TextStyles {
   static const TextStyle header = TextStyle(
     fontSize: 40,
@@ -46,7 +59,7 @@ class TextStyles {
   static const TextStyle splashText = TextStyle(
     fontSize: 24,
     fontWeight: FontWeight.bold,
-    color: AppColors.white,
+    color: AppColors.black,
   );
   static const TextStyle cardNumber = TextStyle(
     color: AppColors.white,
@@ -71,4 +84,17 @@ class TextStyles {
     fontWeight: FontWeight.bold,
     fontSize: 18,
   );
+}
+
+class TextsComponent extends StatelessWidget {
+  final String textComponentValue;
+  const TextsComponent({super.key, required this.textComponentValue});
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      textComponentValue,
+      style: TextStyle(color: AppColors.white, fontSize: 33),
+    );
+  }
 }
